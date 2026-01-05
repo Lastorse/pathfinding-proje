@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pathfinding Proje Ödevi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Kadir Şimşek</h1>
+  <p class="subtitle">
+    Otonom Sistemlere Giriş – Pathfinding Algoritmaları Proje Ödevi
+  </p>
+
+  <div class="controls">
+    <div class="control-box">
+      <strong>Algoritma</strong>
+      <select id="algorithmSelect">
+        <option value="bfs">BFS</option>
+        <option value="dijkstra">Dijkstra</option>
+        <option value="astar" selected>A*</option>
+      </select>
+    </div>
+
+    <div class="control-box">
+      <strong>Hız</strong>
+      <input type="range" id="speedSlider" min="1" max="100" value="15">
+    </div>
+
+    <div class="control-box">
+      <strong>Kontrol</strong>
+      <button id="startBtn">▶ Başlat</button>
+      <button id="resetBtn">⟲ Reset</button>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div>Algoritma: <span id="statAlgo">-</span></div>
+    <div>Ziyaret Edilen: <span id="statVisited">0</span></div>
+    <div>Yol Uzunluğu: <span id="statPath">0</span></div>
+    <div>Süre (ms): <span id="statTime">0</span></div>
+  </div>
+
+  <canvas id="canvas"></canvas>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
